@@ -1,0 +1,75 @@
+/* 
+    Document   : style
+    Created on : 4-Nov-2013, 5:52:21 PM
+    Author     : Matt
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+h1, h2, h3, h4, h5, h6,
+body, div, p, img{
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+}
+
+#wrapper{
+	width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid black;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+#header{
+	height: 200px;
+	border-bottom: 1px solid #000000;
+}
+
+#header h1{
+	margin-left: 10px;
+}
+
+#header img{
+	float: right;
+}
+
+#nav{
+	height: 75px;
+	border-bottom: 1px solid black;
+}
+#nav li{
+	display: inline;
+	margin-right: 20px;
+	font-size: 18pt;
+}
+#content{
+	border-bottom: 1px solid black;
+}
+
+#sidebar{
+	width: 300px;
+	height: 400px;
+	border-right: 1px solid black;
+	float: left;
+}
+
+#main{
+	border: 1px solid red;
+	width: 597px;
+	height: 398px;
+	float: left;
+}
+
+#footer{
+	height: 20px;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
