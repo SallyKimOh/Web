@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+
+        var gdata=[];
+        
+        var storage;
+        if (localStorage.getItem("Que")) {
+            storage = localStorage.getItem("Que");
+        }
+        
+        console.log(storage);
+        
+        
+        gdata = JSON.parse(storage);
+        console.log("FIRST DATA: " + this.gdata[0].a2);        
+        
+        
+        for(g of gdata){
+            console.trace(g);
+            console.log(g.a1);
+        };
+        
+      </script>
+   
+    <title>Survey</title>
+	<link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+	<header>
+		<h1> Survey Result Chart</h1>
+	</header>
+    <div class="survey-title-container clearfix survey-title-align-left has-survey-title ">
+        <input type="button" value="Go Survey" onclick="location.href='survey.html'">
+    </div><br>
+
+	<canvas id="First" width="400" height="400"></canvas>
+	<canvas id="Second" width="400" height="400"></canvas><br>
+	<canvas id="First1" width="400" height="400"></canvas>
+	<canvas id="Second1" width="400" height="400"></canvas><br>
+	<canvas id="First2" width="400" height="400"></canvas>
+	<canvas id="Second2" width="400" height="400"></canvas>
+
+	<!--    <script src="browser.json"></script>-->
+	<script src="js/main1.js"></script>
+
+    </body>
+
+    </html>

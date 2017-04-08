@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+//localStorage.clear();
+        var gdata=[];
+        var tempData=[];
+        var rData=[];
+        
+        var q={
+            a1:0,
+            a2:0,
+            a3:0,
+            a4:0,
+            a5:0
+        }
+        
+        var storage;
+        if (localStorage.getItem("Que")) {
+            storage = localStorage.getItem("Que");
+            rData = JSON.parse(storage);
+//        console.log("FIRST DATA: " + this.rData[0].a2);      
+        }
+        
+//        console.log(storage);
+        
+        
+ 
+//         alert(form1.Q1.value);
+//        
+//        
+//        
+//       for(g of tempData){
+//            console.trace(g);
+//            console.log(g.a1);
+//        };
+// 
+//        
+//        
+//        for(let i=0;i<5;i++){
+//            let Q=Object.create(q);
+//            Q.a1=0;
+//            Q.a2=0;
+//            Q.a3=0;
+//            Q.a4=0;
+//            Q.a5=0;
+//            
+//            gdata.push(Q);
+//        }
+        
+//
+//        
+////        gdata.forEach.call(function(g){
+//        for(g of gdata){
+//            console.trace(g);
+//            console.log(g.a1);
+//        };
+//        
+//        
+        
+        
+        
+        function fn_check(){
+        
+        for(let i=0;i<5;i++){
+            let T=Object.create(q);
+            T.a1=eval('document.form1.Q'+(i+1)+'.value')=='E'?this.rData[i].a1+1:this.rData[i].a1;
+            T.a2=eval('document.form1.Q'+(i+1)+'.value')=='D'?this.rData[i].a2+1:this.rData[i].a2;
+            T.a3=eval('document.form1.Q'+(i+1)+'.value')=='C'?this.rData[i].a3+1:this.rData[i].a3;
+            T.a4=eval('document.form1.Q'+(i+1)+'.value')=='B'?this.rData[i].a4+1:this.rData[i].a4;
+            T.a5=eval('document.form1.Q'+(i+1)+'.value')=='A'?this.rData[i].a5+1:this.rData[i].a5;
+            tempData.push(T);
+        }
+        
+//       for(g of tempData){
+//            console.trace(g);
+//            console.log(g.a1);
+//        };
+// 
+                    
+            
+            
+            
+            
+            
+//        localStorage.setItem("Q1"+num,form1.Q1.value);
+//        localStorage.setItem("Q2"+num,form1.Q2.value);
+//        localStorage.setItem("Q3"+num,form1.Q3.value);
+//        localStorage.setItem("Q4"+num,form1.Q4.value);
+//        localStorage.setItem("Q5"+num,form1.Q5.value);
+//            
+//        localStorage.setItem(MYKEY, JSON.stringify(GSTORAGE.gdata));            
+            
+ //       localStorage.setItem("Que", JSON.stringify(gdata));            
+        localStorage.setItem("Que", JSON.stringify(tempData));            
+            
+////            localStorage.clear();
+////          alert(localStorage.getItem("num"));  
+//
+//            var num = localStorage.getItem("num");
+//            var i = 1;
+//            if (isNaN(num)) {
+//               num = i;
+//            } else {
+//                num++;
+//            }
+////                alert(num);
+//            
+////            alert(form1.qA.value);
+////            alert(form1.qB.value);
+//            
+//            localStorage.setItem("qA"+num,form1.qA.value);
+//            localStorage.setItem("qB"+num,form1.qB.value);
+//            localStorage.setItem("num",num);
+//        
+//            var q1A=0;
+//            var q1B=0;
+//            var q1C=0;
+//            var q2A=0;
+//            var q2B=0;
+//            var q2C=0;
+//            
+//            for (var j = 1 ; j <=num; j++) {
+////                alert(localStorage.getItem("qA"+j));
+////                alert(localStorage.getItem("qB"+j));
+//                switch (localStorage.getItem("qA"+j)) {
+//                    case '1':
+//                        q1A++;
+//                        break;
+//                    case '2':
+//                        q1B++;
+//                        break;
+//                    case '3':
+//                        q1C++;
+//                        break;
+//                }
+//                switch (localStorage.getItem("qB"+j)) {
+//                    case '1':
+//                        q2A++;
+//                        break;
+//                    case '2':
+//                        q2B++;
+//                        break;
+//                    case '3':
+//                        q2C++;
+//                        break;
+//                }
+//                    
+//            }
+//            
+//            alert("q1A-count:"+q1A);
+//            alert("q1B-count:"+q1B);
+//            alert("q1C-count:"+q1C);
+//            alert("q2A-count:"+q2A);
+//            alert("q2B-count:"+q2B);
+//            alert("q2C-count:"+q2C);
+//            
+            form1.action="survey_result.html"
+            form1.submit();
+        }
+    </script>   
+   
+    <title>Survey</title>
+        <link type="text/css" rel="stylesheet" href="https://secure.surveymonkey.com/smassets/responseweb/responseweb-base-bundle-min.237599f1.css" />
+        <link type="text/css" rel="stylesheet" href="https://secure.surveymonkey.com/smassets/responseweb/smlib.surveytemplates-survey_page-bundle-min.4aa65334.css" />
+    </head>
+    <body id="patas" class="translate survey-body modern-browser">
+    <article class="survey-page survey-page-white ">
+    <header class="survey-page-header">
+    <div class="survey-title-container clearfix survey-title-align-left has-survey-title ">
+        <div class="exit-button-container">
+            <a data-exit-survey-btn role="button" class="exit-survey user-generated notranslate exit-survey-float" href="survey_result.html">
+                   Go Result
+            </a>
+        </div>
+        <div class="survey-title-table-wrapper">
+            <table role="presentation" class="survey-title-table table-reset">
+                <tbody>
+                    <tr>
+                        <td class="survey-title-cell">
+                            <h1 class="survey-title user-generated notranslate">
+                                <span class="title-text">
+                                    Feasibility of Preventing Water Damage in Canadian Homes Using Modern Technology
+                                </span>
+                            </h1>
+                        </td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </header>
+    <section class="survey-page-body">
+        <form name='form1' method='get' action="" onsubmit="fn_check();">
+             <div class="questions clearfix">
+                <div class="question-row clearfix" >
+                    <div data-question-type="" class="">
+                        <div  data-qnumber="1" accesskey="" class="" >
+                            <fieldset  class=" question-fieldset" data-radio-button-group >
+                            <h4 id="" class="question-title-container">
+                                <span class="user-generated notranslate">
+                                    1. How about this information?
+                                </span>
+                            </h4>
+                            <div class="question-body clearfix notranslate ">
+                                <div class="">
+                                    <div class="answer-option-cell">
+                                        <div data-sm-radio-button class="radio-button-container">
+                                            <input id="A1" name="Q1" type="radio" value="E"/>&nbsp; &nbsp; Not well at all  <br>                                         
+                                        </div>
+                                    </div>
+                                    <div class="answer-option-cell">
+                                        <div data-sm-radio-button class="radio-button-container">
+                                            <input id="A2" name="Q1" type="radio" value="D"/>&nbsp; &nbsp; Mildly all          <br>                                 
+                                        </div>
+                                    </div>
+                                    <div class="answer-option-cell">
+                                        <div data-sm-radio-button class="radio-button-container">
+                                            <input id="A3" name="Q1" type="radio" value="C"/>&nbsp; &nbsp; Fairly all              <br>                             
+                                        </div>
+                                    </div>
+                                    <div class="answer-option-cell">
+                                        <div data-sm-radio-button class="radio-button-container">
+                                            <input id="A4" name="Q1" type="radio" value="B"/>&nbsp; &nbsp; Quite all                   <br>                        
+                                        </div>
+                                    </div>
+                                    <div class="answer-option-cell">
+                                        <div data-sm-radio-button class="radio-button-container">
+                                            <input id="A5" name="Q1" type="radio" value="A"/>&nbsp; &nbsp; Extremely all                   <br>                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="questions clearfix">
+                <div class="question-row clearfix" >
+                    <div data-question-type="" class="">
+                        <div  data-qnumber="1" accesskey="" class="" >
+                            <fieldset  class=" question-fieldset" data-radio-button-group >
+                            <h4 id="" class="question-title-container">
+                                <span class="user-generated notranslate">
+                                    2. Are you intereted this information?
+                                </span>
+                            </h4>
+                            <div class="question-body clearfix notranslate ">
+                                <div class="">
+                                    <div class="answer-option-cell">
+                                        <div data-sm-radio-button class="radio-button-container">
+                                            <input id="B1" name="Q2" type="radio" value="E"/>&nbsp; &nbsp; Not well at all  <br>                                         
+                                        </div>
+                                    </div>
+                                    <div class="answer-option-cell">
+                                        <div data-sm-radio-button class="radio-button-container">
+                                            <input id="B2" name="Q2" type="radio" value="D"/>&nbsp; &nbsp; Mildly all          <br>                                 
+                                        </div>
+                                    </div>
+                                    <div class="answer-option-cell">
+                                        <div data-sm-radio-button class="radio-button-container">
+                                            <input id="B3" name="Q2" type="radio" value="C"/>&nbsp; &nbsp; Fairly all              <br>                             
+                                        </div>
+                                    </div>
+                                    <div class="answer-option-cell">
+                                        <div data-sm-radio-button class="radio-button-container">
+                                            <input id="B4" name="Q2" type="radio" value="B"/>&nbsp; &nbsp; Quite all                   <br>                        
+                                        </div>
+                                    </div>
+                                    <div class="answer-option-cell">
+                                        <div data-sm-radio-button class="radio-button-container">
+                                            <input id="B5" name="Q2" type="radio" value="A"/>&nbsp; &nbsp; Extremely all                   <br>                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="questions clearfix">
+                <div class="question-row clearfix" >
+                    <div data-question-type="" class="">
+                        <div  data-qnumber="1" accesskey="" class="" >
+                            <fieldset  class=" question-fieldset" data-radio-button-group >
+                            <h4 id="" class="question-title-container">
+                                <span class="user-generated notranslate">
+                                    3. Is this help for you?
+                                </span>
+                            </h4>
+                            <div class="question-body clearfix notranslate ">
+                                <div class="">
+                                    <div class="answer-option-cell">
+                                        <div data-sm-radio-button class="radio-button-container">
+                                            <input id="C1" name="Q3" type="radio" value="E"/>&nbsp; &nbsp; Not well at all  <br>                                         
+                                        </div>
+                                    </div>
+                                    <div class="answer-option-cell">
+                                        <div data-sm-radio-button class="radio-button-container">
+                                            <input id="C2" name="Q3" type="radio" value="D"/>&nbsp; &nbsp; Mildly all          <br>                                 
+                                        </div>
+                                    </div>
+                                    <div class="answer-option-cell">
+                                        <div data-sm-radio-button class="radio-button-container">
+                                            <input id="C3" name="Q3" type="radio" value="C"/>&nbsp; &nbsp; Fairly all              <br>                             
+                                        </div>
+                                    </div>
+                                    <div class="answer-option-cell">
+                                        <div data-sm-radio-button class="radio-button-container">
+                                            <input id="C4" name="Q3" type="radio" value="B"/>&nbsp; &nbsp; Quite all                   <br>                        
+                                        </div>
+                                    </div>
+                                    <div class="answer-option-cell">
+                                        <div data-sm-radio-button class="radio-button-container">
+                                            <input id="C5" name="Q3" type="radio" value="A"/>&nbsp; &nbsp; Extremely all                   <br>                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="questions clearfix">
+                <div class="question-row clearfix" >
+                    <div data-question-type="" class="">
+                        <div  data-qnumber="1" accesskey="" class="" >
+                            <fieldset  class=" question-fieldset" data-radio-button-group >
+                            <h4 id="" class="question-title-container">
+                                <span class="user-generated notranslate">
+                                    4. How well do the activities offered at your child&#39;s school match his or her interests?
+                                </span>
+                            </h4>
+                            <div class="question-body clearfix notranslate ">
+                                <div class="">
+                                    <div class="answer-option-cell">
+                                        <div data-sm-radio-button class="radio-button-container">
+                                            <input id="D1" name="Q4" type="radio" value="E"/>&nbsp; &nbsp; Not well at all  <br>                                         
+                                        </div>
+                                    </div>
+                                    <div class="answer-option-cell">
+                                        <div data-sm-radio-button class="radio-button-container">
+                                            <input id="D2" name="Q4" type="radio" value="D"/>&nbsp; &nbsp; Mildly all          <br>                                 
+                                        </div>
+                                    </div>
+                                    <div class="answer-option-cell">
+                                        <div data-sm-radio-button class="radio-button-container">
+                                            <input id="D3" name="Q4" type="radio" value="C"/>&nbsp; &nbsp; Fairly all              <br>                             
+                                        </div>
+                                    </div>
+                                    <div class="answer-option-cell">
+                                        <div data-sm-radio-button class="radio-button-container">
+                                            <input id="D4" name="Q4" type="radio" value="B"/>&nbsp; &nbsp; Quite all                   <br>                        
+                                        </div>
+                                    </div>
+                                    <div class="answer-option-cell">
+                                        <div data-sm-radio-button class="radio-button-container">
+                                            <input id="D5" name="Q4" type="radio" value="A"/>&nbsp; &nbsp; Extremely all                   <br>                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="questions clearfix">
+                <div class="question-row clearfix" >
+                    <div data-question-type="" class="">
+                        <div  data-qnumber="1" accesskey="" class="" >
+                            <fieldset  class=" question-fieldset" data-radio-button-group >
+                            <h4 id="" class="question-title-container">
+                                <span class="user-generated notranslate">
+                                    5. How do you think about quelity of this presentation?
+                                </span>
+                            </h4>
+                            <div class="question-body clearfix notranslate ">
+                                <div class="">
+                                    <div class="answer-option-cell">
+                                        <div data-sm-radio-button class="radio-button-container">
+                                            <input id="E1" name="Q5" type="radio" value="E"/>&nbsp; &nbsp; Not well at all  <br>                                         
+                                        </div>
+                                    </div>
+                                    <div class="answer-option-cell">
+                                        <div data-sm-radio-button class="radio-button-container">
+                                            <input id="E2" name="Q5" type="radio" value="D"/>&nbsp; &nbsp; Mildly all          <br>                                 
+                                        </div>
+                                    </div>
+                                    <div class="answer-option-cell">
+                                        <div data-sm-radio-button class="radio-button-container">
+                                            <input id="E3" name="Q5" type="radio" value="C"/>&nbsp; &nbsp; Fairly all              <br>                             
+                                        </div>
+                                    </div>
+                                    <div class="answer-option-cell">
+                                        <div data-sm-radio-button class="radio-button-container">
+                                            <input id="E4" name="Q5" type="radio" value="B"/>&nbsp; &nbsp; Quite all                   <br>                        
+                                        </div>
+                                    </div>
+                                    <div class="answer-option-cell">
+                                        <div data-sm-radio-button class="radio-button-container">
+                                            <input id="E5" name="Q5" type="radio" value="A"/>&nbsp; &nbsp; Extremely all                   <br>                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="survey-submit-actions center-text clearfix">
+                <button type="submit" class="btn small done-button survey-page-button user-generated notranslate">
+                        Done
+                </button>
+            </div>
+        </form>
+    </section>
+
+
+</article>
+  </body>
+</html>
